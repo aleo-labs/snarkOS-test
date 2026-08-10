@@ -425,7 +425,7 @@ commands:
 jobs:
   snarkos:
     executor: rust-docker
-    resource_class: << pipeline.parameters.twoxlarge >>
+    resource_class: << pipeline.parameters.xlarge >>
     steps:
       - run_serial:
           workspace_member: .
@@ -441,7 +441,7 @@ jobs:
 
   cli:
     executor: rust-docker
-    resource_class: << pipeline.parameters.twoxlarge >>
+    resource_class: << pipeline.parameters.xlarge >>
     steps:
       - run_serial:
           workspace_member: cli
@@ -449,7 +449,7 @@ jobs:
 
   node:
     executor: rust-docker
-    resource_class: << pipeline.parameters.twoxlarge >>
+    resource_class: << pipeline.parameters.xlarge >>
     steps:
       - run_serial:
           workspace_member: node
@@ -457,7 +457,7 @@ jobs:
 
   node-bft:
     executor: rust-docker
-    resource_class: << pipeline.parameters.twoxlarge >>
+    resource_class: << pipeline.parameters.xlarge >>
     steps:
       - run_serial:
           workspace_member: node/bft
@@ -605,7 +605,7 @@ jobs:
 
   chaotic-minority-reset-test:
     executor: ubuntu-vm
-    resource_class: << pipeline.parameters.twoxlarge >>
+    resource_class: << pipeline.parameters.xlarge >>
     steps:
      - checkout
      - setup_environment:
@@ -627,7 +627,7 @@ jobs:
 
   chaotic-majority-reset-test:
     executor: ubuntu-vm
-    resource_class: << pipeline.parameters.twoxlarge >>
+    resource_class: << pipeline.parameters.xlarge >>
     steps:
      - checkout
      - setup_environment:
